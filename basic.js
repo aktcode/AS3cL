@@ -8,4 +8,17 @@ $(document).ready(function() {
             $('.webdet').hide(200);
         }
     });
+
+    $('#del_this_account').click(function(){
+        $('.show_del').show(500);
+       
+    });
+    $('#close').click(function(){
+        $('.show_del').hide(500);
+       
+    });
+
+
 });
+
+

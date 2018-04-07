@@ -1,5 +1,4 @@
 <?php
-
 function retrieve($a){
     if(isset($a)){
         echo $a;
@@ -81,5 +80,11 @@ function create_new(){
 
 }
 
+
+function unlink_config(){
+    unlink('config.php');
+    unlink('client.php');
+    echo("<script>location.href = 'index.php';</script>");   
+}
 
 ?>

@@ -1,17 +1,15 @@
 <?php
 use Aws\S3\Exception\S3Exception;
 require('functions.php');
-
 if(file_exists('config.php')){
     require('client.php');
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>S3 Client</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -99,14 +97,25 @@ Your current region :<b>
     <?php
     create_new();
     ?>
+    <button id="del_this_account">Delete this account</button>
+    <div class="show_del">
+        Are you sure you want to unlink your account? You will have provide the access key and secret again next time you want to enter.
+        <br>
+    <a href="?unlink_account=1">Unlink account</a><br><br>
+    <button id="close" href="">Close</button>
+    </div>
+    
+    <?php
+        if(isset($_REQUEST['unlink_account'])){
+            unlink_config();
+        }
+    ?>
 </div>
+
 
 <script src="basic.js">  </script>
 
-<script>
 
-
-</script>
 </body>
 </html>
 

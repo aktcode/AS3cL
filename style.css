@@ -170,3 +170,18 @@
       background-color:#D8D9F5;
       padding:10px;
   }
+
+  div.show_del{
+    display:none;
+    position:fixed;
+    width:100%;
+    top:0px;
+    left:0px;
+    margin:auto;
+    padding:20px;
+    background-color:#812e2ec0;
+
+  }
+  div.show_del a{
+    color:#bdbcbc;
+  }
